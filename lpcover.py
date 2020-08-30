@@ -24,3 +24,7 @@ bnd = [
 opt = linprog(c=obj, A_ub=lhs_ineq, b_ub=rhs_ineq, 
 	bounds=bnd, method="revised simplex")
 print(opt)
+
+def solve():
+  print("Solving...")
+  print(opt)
