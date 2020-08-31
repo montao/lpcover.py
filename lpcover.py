@@ -12,7 +12,7 @@ lhs_ineq = [
 	[0, 0, 0, 0, -1, -1, 0, 0],
 	[0, 0, 0, 0, 0, -1, -1, 0],
 	[0, 0, 0, 0, 0, -1, 0, -1]]
-rhs_ineq = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+rhs_ineq = [-1] * len(lhs_ineq)
 bnd = [(0, float("inf"))] * n
 opt = linprog(c=obj, A_ub=lhs_ineq, b_ub=rhs_ineq, 
 	bounds=bnd, method="revised simplex")
